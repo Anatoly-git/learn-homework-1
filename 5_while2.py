@@ -24,6 +24,7 @@ def ask_user(answers_dict):
     while True:
         ask_user = input('Введите свой вопрос:  ')
         if ask_user in answers_dict:
+            #answers_dict.get(ask_user) можно использовать
             print(answers_dict[ask_user])
         elif ask_user == 'Пока':
             break

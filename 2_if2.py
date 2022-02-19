@@ -28,6 +28,7 @@ def main(str1, str2):
     """
   a = not(type(str1) is str)
   b = not(type (str2) is str)
+  # isinstance(variable, str)  также возможно использовать
   c = a or b
   #print(a)
   #print(b)
@@ -40,7 +41,7 @@ def main(str1, str2):
     comparison = 3
   elif len(str1) > len(str2):
     comparison = 2
-  return(comparison)
+  return comparison
   
 str1=''
 str2=''
