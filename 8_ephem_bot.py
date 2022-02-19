@@ -16,7 +16,7 @@ import logging
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-import settigs
+import settings
 
 from datetime import date
 
@@ -28,10 +28,10 @@ logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
 
 
 PROXY = {
-    'proxy_url': settigs.PROXY_URL,
+    'proxy_url': settings.PROXY_URL,
     'urllib3_proxy_kwargs': {
-        'username': settigs.PROXY_USERNAME,
-        'password': settigs.PROXY_PASSWORD
+        'username': settings.PROXY_USERNAME,
+        'password': settings.PROXY_PASSWORD
     }
 }
 
@@ -68,7 +68,7 @@ def get_constellation(update, context):
 
 
 def main():
-    mybot = Updater(settigs.API_KEY, request_kwargs=PROXY, use_context=True)
+    mybot = Updater(settings.API_KEY, request_kwargs=PROXY, use_context=True)
 
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler('planet', get_constellation))

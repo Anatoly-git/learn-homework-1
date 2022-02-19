@@ -1,4 +1,4 @@
-settigs.py
+settings.py
 *.mp4
 # Byte-compiled / optimized / DLL files
 __pycache__/
