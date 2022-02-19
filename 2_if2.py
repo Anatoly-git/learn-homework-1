@@ -15,12 +15,42 @@
 
 """
 
-def main():
+
+from pickletools import string1
+
+
+
+def main(str1, str2):
+
+  """
+  Эта функция вызывается автоматически при запуске скрипта в консоли
+  В ней надо заменить pass на ваш код
     """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
-    
+  a = not(type(str1) is str)
+  b = not(type (str2) is str)
+  c = a or b
+  #print(a)
+  #print(b)
+  #print(c)
+  if c:
+    comparison = 0
+  elif len(str1) == len(str2):
+    comparison = 1
+  elif str2 == 'learn':
+    comparison = 3
+  elif len(str1) > len(str2):
+    comparison = 2
+  return(comparison)
+  
+str1=''
+str2=''
+print(main('Строка', 45))
+print(main(23, 'Строка'))
+print(main(324, 523))
+print(main('Строка1', 'Строка2'))
+print(main('Строка1 длинее', 'Строка 2'))
+print(main('Строка1', 'learn'))
+
+
 if __name__ == "__main__":
-    main()
+    main(str1, str2)
